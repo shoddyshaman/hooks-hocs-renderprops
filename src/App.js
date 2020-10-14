@@ -7,9 +7,14 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Hooks />
+      {/* <Hooks /> */}
       {/* <ThemeChanger /> */}
       {/* render prop component here */}
+      <RenderProp render={(theme, toggleFn) => (
+        <div className={theme}>
+          <button className='toggle-btn' onClick={toggleFn}>{theme}</button>
+        </div>
+      )}/>
     </div>
   );
 }
